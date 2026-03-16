@@ -7,6 +7,8 @@
 
 # LocalLLM - Private AI Chat for iOS
 
+> Created by **Ali Moustafa** — [mustafa30102001@gmail.com](mailto:mustafa30102001@gmail.com)
+
 Run large language models **entirely on your iPhone or iPad**. No internet required, no subscriptions, no data leaves your device.
 
 LocalLLM uses [llama.cpp](https://github.com/ggerganov/llama.cpp) with Metal GPU acceleration to run GGUF models locally on Apple Silicon, delivering fast and private AI conversations.
@@ -184,6 +186,10 @@ LocalLLM is designed with privacy as a core principle:
 ## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## Author
+
+**Ali Moustafa** — [mustafa30102001@gmail.com](mailto:mustafa30102001@gmail.com)
 
 ## License
 

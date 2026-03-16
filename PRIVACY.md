@@ -1,6 +1,6 @@
 # Privacy Policy - LocalLLM
 
-**Last updated: March 2025**
+**Last updated: March 2026**
 
 ## Overview
 
@@ -52,4 +52,4 @@ Any changes to this policy will be reflected in app updates with an updated date
 
 ## Contact
 
-For privacy-related questions, please open an issue on the GitHub repository.
+For privacy-related questions, contact **Ali Moustafa** at [mustafa30102001@gmail.com](mailto:mustafa30102001@gmail.com).

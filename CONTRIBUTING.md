@@ -73,6 +73,10 @@ To add a new model to the catalog:
 2. Physical iOS device (iPhone 12+ or iPad with A14+ chip)
 3. Apple Developer account (for device testing)
 
+## Contact
+
+For questions about contributing, reach out to **Ali Moustafa** at [mustafa30102001@gmail.com](mailto:mustafa30102001@gmail.com).
+
 ## License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
