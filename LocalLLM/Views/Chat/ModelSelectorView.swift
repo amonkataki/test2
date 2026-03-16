@@ -3,7 +3,9 @@ import SwiftUI
 struct ModelSelectorView: View {
     let conversation: Conversation
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
     @StateObject private var modelManager = ModelManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
         NavigationStack {
@@ -19,6 +21,7 @@ struct ModelSelectorView: View {
                         Button {
                             conversation.modelId = model.id
                             modelManager.selectModel(model)
+                            try? modelContext.save()
                             dismiss()
                         } label: {
                             HStack {
@@ -35,7 +38,7 @@ struct ModelSelectorView: View {
 
                                 if conversation.modelId == model.id {
                                     Image(systemName: "checkmark.circle.fill")
-                                        .foregroundStyle(.purple)
+                                        .foregroundStyle(themeManager.accentColor)
                                 }
                             }
                             .padding(.vertical, 4)

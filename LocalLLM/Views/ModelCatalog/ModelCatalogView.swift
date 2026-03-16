@@ -86,6 +86,8 @@ struct ModelCatalogRow: View {
     let onDelete: () -> Void
     let onSelect: () -> Void
 
+    @StateObject private var themeManager = ThemeManager.shared
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
@@ -97,7 +99,7 @@ struct ModelCatalogRow: View {
                         if isSelected {
                             Image(systemName: "checkmark.circle.fill")
                                 .font(.caption)
-                                .foregroundStyle(.purple)
+                                .foregroundStyle(themeManager.accentColor)
                         }
                     }
 
@@ -106,7 +108,7 @@ struct ModelCatalogRow: View {
                             .font(.caption2)
                             .padding(.horizontal, 6)
                             .padding(.vertical, 2)
-                            .background(.purple.opacity(0.15))
+                            .background(themeManager.accentColor.opacity(0.15))
                             .clipShape(Capsule())
 
                         Text(model.parameterCount)
@@ -136,7 +138,7 @@ struct ModelCatalogRow: View {
             if case .downloading(let progress) = downloadState {
                 VStack(alignment: .leading, spacing: 4) {
                     ProgressView(value: progress)
-                        .tint(.purple)
+                        .tint(themeManager.accentColor)
 
                     Text("\(Int(progress * 100))%")
                         .font(.caption2)
@@ -154,7 +156,7 @@ struct ModelCatalogRow: View {
             Button(action: onDownload) {
                 Image(systemName: "arrow.down.circle")
                     .font(.title2)
-                    .foregroundStyle(.purple)
+                    .foregroundStyle(themeManager.accentColor)
             }
             .buttonStyle(.plain)
 
@@ -177,7 +179,7 @@ struct ModelCatalogRow: View {
             } label: {
                 Image(systemName: "ellipsis.circle")
                     .font(.title2)
-                    .foregroundStyle(.purple)
+                    .foregroundStyle(themeManager.accentColor)
             }
 
         case .error:
@@ -198,6 +200,8 @@ struct FilterChip: View {
     let isSelected: Bool
     let action: () -> Void
 
+    @StateObject private var themeManager = ThemeManager.shared
+
     var body: some View {
         Button(action: action) {
             Text(title)
@@ -205,7 +209,7 @@ struct FilterChip: View {
                 .fontWeight(isSelected ? .semibold : .regular)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 6)
-                .background(isSelected ? .purple : .gray.opacity(0.2))
+                .background(isSelected ? themeManager.accentColor : .gray.opacity(0.2))
                 .foregroundStyle(isSelected ? .white : .primary)
                 .clipShape(Capsule())
         }

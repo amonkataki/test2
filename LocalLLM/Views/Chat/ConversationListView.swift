@@ -6,6 +6,7 @@ struct ConversationListView: View {
     @Query(sort: \Conversation.updatedAt, order: .reverse) private var conversations: [Conversation]
     @Binding var selectedConversation: Conversation?
     @StateObject private var modelManager = ModelManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
         List(selection: $selectedConversation) {
@@ -53,8 +54,8 @@ struct ConversationListView: View {
                         .font(.caption2)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
-                        .background(.purple.opacity(0.2))
-                        .foregroundStyle(.purple)
+                        .background(themeManager.accentColor.opacity(0.2))
+                        .foregroundStyle(themeManager.accentColor)
                         .clipShape(Capsule())
                 }
 
@@ -69,7 +70,9 @@ struct ConversationListView: View {
     }
 
     private func createNewConversation() {
-        let modelId = modelManager.selectedModelId ?? modelManager.downloadedModels.first?.id ?? ""
+        guard let modelId = modelManager.selectedModelId ?? modelManager.downloadedModels.first?.id else {
+            return
+        }
         let conversation = Conversation(modelId: modelId)
         modelContext.insert(conversation)
         selectedConversation = conversation

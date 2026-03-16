@@ -6,6 +6,7 @@ struct ChatView: View {
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = ChatViewModel()
     @StateObject private var modelManager = ModelManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
     @State private var showModelSelector = false
     @FocusState private var isInputFocused: Bool
 
@@ -139,7 +140,7 @@ struct ChatView: View {
                             .foregroundStyle(
                                 viewModel.currentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                                     ? .gray
-                                    : .purple
+                                    : themeManager.accentColor
                             )
                     }
                     .disabled(viewModel.currentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)

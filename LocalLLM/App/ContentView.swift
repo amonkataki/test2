@@ -4,9 +4,9 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @StateObject private var modelManager = ModelManager.shared
+    @StateObject private var themeManager = ThemeManager.shared
     @State private var selectedTab = 0
     @State private var selectedConversation: Conversation?
-    @State private var showingSidebar = false
     @State private var columnVisibility = NavigationSplitViewVisibility.automatic
 
     var body: some View {
@@ -29,7 +29,8 @@ struct ContentView: View {
                 }
                 .tag(2)
         }
-        .tint(.purple)
+        .tint(themeManager.accentColor)
+        .preferredColorScheme(themeManager.colorScheme)
     }
 
     @ViewBuilder
@@ -49,7 +50,7 @@ struct ContentView: View {
         VStack(spacing: 20) {
             Image(systemName: "bubble.left.and.text.bubble.right")
                 .font(.system(size: 60))
-                .foregroundStyle(.purple.opacity(0.6))
+                .foregroundStyle(themeManager.accentColor.opacity(0.6))
 
             Text("Local LLM Chat")
                 .font(.title)
@@ -63,7 +64,7 @@ struct ContentView: View {
                     selectedTab = 1
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.purple)
+                .tint(themeManager.accentColor)
             } else {
                 Text("Select a conversation or start a new one")
                     .foregroundStyle(.secondary)
@@ -72,14 +73,16 @@ struct ContentView: View {
                     createNewConversation()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.purple)
+                .tint(themeManager.accentColor)
             }
         }
         .padding()
     }
 
     private func createNewConversation() {
-        let modelId = modelManager.selectedModelId ?? modelManager.downloadedModels.first?.id ?? ""
+        guard let modelId = modelManager.selectedModelId ?? modelManager.downloadedModels.first?.id else {
+            return
+        }
         let conversation = Conversation(modelId: modelId)
         modelContext.insert(conversation)
         selectedConversation = conversation

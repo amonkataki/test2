@@ -25,6 +25,7 @@
 		AA000016 /* LLMEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000016; };
 		AA000017 /* ModelSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000017; };
 		AA000018 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000018; };
+		AA000019 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000019; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		AB000016 /* LLMEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMEngine.swift; sourceTree = "<group>"; };
 		AB000017 /* ModelSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectorView.swift; sourceTree = "<group>"; };
 		AB000018 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		AB000019 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -124,6 +126,7 @@
 				AB000008 /* ModelManager.swift */,
 				AB000016 /* LLMEngine.swift */,
 				AB000018 /* DownloadManager.swift */,
+				AB000019 /* ThemeManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				AA000016,
 				AA000017,
 				AA000018,
+				AA000019,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@ struct MessageBubble: View {
     var onRegenerate: (() -> Void)?
     var onDelete: (() -> Void)?
 
+    @StateObject private var themeManager = ThemeManager.shared
     @State private var showActions = false
 
     var body: some View {
@@ -20,7 +21,7 @@ struct MessageBubble: View {
                     if message.role == .assistant {
                         Image(systemName: "brain")
                             .font(.caption2)
-                            .foregroundStyle(.purple)
+                            .foregroundStyle(themeManager.accentColor)
                     }
                     Text(message.role == .user ? "You" : "Assistant")
                         .font(.caption)
@@ -30,15 +31,20 @@ struct MessageBubble: View {
                 // Message content
                 Text(message.content.isEmpty ? " " : message.content)
                     .font(.body)
+                    .foregroundStyle(message.role == .user ? .white : .primary)
                     .textSelection(.enabled)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
-                    .background(bubbleBackground)
+                    .background(
+                        message.role == .user
+                            ? AnyShapeStyle(themeManager.accentColor.opacity(0.85))
+                            : AnyShapeStyle(.gray.opacity(0.15))
+                    )
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay {
                         if isStreaming {
                             RoundedRectangle(cornerRadius: 16)
-                                .strokeBorder(.purple.opacity(0.3), lineWidth: 1)
+                                .strokeBorder(themeManager.accentColor.opacity(0.3), lineWidth: 1)
                         }
                     }
 
@@ -70,15 +76,6 @@ struct MessageBubble: View {
         }
     }
 
-    @ViewBuilder
-    private var bubbleBackground: some ShapeStyle {
-        if message.role == .user {
-            .purple.opacity(0.8)
-        } else {
-            .gray.opacity(0.15)
-        }
-    }
-
     private var actionButtons: some View {
         HStack(spacing: 12) {
             Button {
@@ -105,9 +102,4 @@ struct MessageBubble: View {
         .foregroundStyle(.secondary)
         .padding(.top, 2)
     }
-}
-
-// Workaround: make ShapeStyle work with conditional
-extension ShapeStyle where Self == Color {
-    // Intentionally empty
 }

@@ -20,7 +20,7 @@ final class LLMService: ObservableObject {
 
     func loadModel(_ modelId: String) async throws {
         guard let path = modelManager.modelPath(forId: modelId) else {
-            throw LLMError.modelFileNotFound(modelId)
+            throw LLMError.modelFileNotFound("No downloaded file for model: \(modelId)")
         }
 
         // Don't reload if already loaded
