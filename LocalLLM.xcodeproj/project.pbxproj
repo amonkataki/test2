@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA000001 /* LocalLLMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001; };
+		AA000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000002; };
+		AA000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB000003; };
+		AA000004 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000004; };
+		AA000005 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000005; };
+		AA000006 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000006; };
+		AA000007 /* LLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000007; };
+		AA000008 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000008; };
+		AA000009 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000009; };
+		AA000010 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000010; };
+		AA000011 /* ModelCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000011; };
+		AA000012 /* ModelCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000012; };
+		AA000013 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000013; };
+		AA000014 /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000014; };
+		AA000015 /* ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000015; };
+		AA000016 /* LLMEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000016; };
+		AA000017 /* ModelSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000017; };
+		AA000018 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000018; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB000000 /* LocalLLM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalLLM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB000001 /* LocalLLMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLLMApp.swift; sourceTree = "<group>"; };
+		AB000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB000004 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		AB000005 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		AB000006 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		AB000007 /* LLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMService.swift; sourceTree = "<group>"; };
+		AB000008 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		AB000009 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		AB000010 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		AB000011 /* ModelCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCatalogView.swift; sourceTree = "<group>"; };
+		AB000012 /* ModelCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCatalogViewModel.swift; sourceTree = "<group>"; };
+		AB000013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB000014 /* ConversationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
+		AB000015 /* ModelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInfo.swift; sourceTree = "<group>"; };
+		AB000016 /* LLMEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMEngine.swift; sourceTree = "<group>"; };
+		AB000017 /* ModelSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectorView.swift; sourceTree = "<group>"; };
+		AB000018 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		AC000000 = {
+			isa = PBXGroup;
+			children = (
+				AC000001 /* LocalLLM */,
+				AC000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC000001 /* LocalLLM */ = {
+			isa = PBXGroup;
+			children = (
+				AC000010 /* App */,
+				AC000011 /* Views */,
+				AC000012 /* ViewModels */,
+				AC000013 /* Models */,
+				AC000014 /* Services */,
+				AB000003 /* Assets.xcassets */,
+			);
+			path = LocalLLM;
+			sourceTree = "<group>";
+		};
+		AC000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000 /* LocalLLM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC000010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB000001 /* LocalLLMApp.swift */,
+				AB000002 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AC000011 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC000020 /* Chat */,
+				AC000021 /* ModelCatalog */,
+				AC000022 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC000012 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AB000005 /* ChatViewModel.swift */,
+				AB000012 /* ModelCatalogViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AC000013 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB000009 /* Conversation.swift */,
+				AB000010 /* ChatMessage.swift */,
+				AB000015 /* ModelInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC000014 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB000007 /* LLMService.swift */,
+				AB000008 /* ModelManager.swift */,
+				AB000016 /* LLMEngine.swift */,
+				AB000018 /* DownloadManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC000020 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AB000004 /* ChatView.swift */,
+				AB000006 /* MessageBubble.swift */,
+				AB000014 /* ConversationListView.swift */,
+				AB000017 /* ModelSelectorView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AC000021 /* ModelCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				AB000011 /* ModelCatalogView.swift */,
+			);
+			path = ModelCatalog;
+			sourceTree = "<group>";
+		};
+		AC000022 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AB000013 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD000000 /* LocalLLM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE000002;
+			buildPhases = (
+				AD000001 /* Sources */,
+				AD000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalLLM;
+			packageProductDependencies = (
+			);
+			productName = LocalLLM;
+			productReference = AB000000 /* LocalLLM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AD000000 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AE000000;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC000000;
+			packageReferences = (
+			);
+			productRefGroup = AC000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD000000 /* LocalLLM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000001,
+				AA000002,
+				AA000004,
+				AA000005,
+				AA000006,
+				AA000007,
+				AA000008,
+				AA000009,
+				AA000010,
+				AA000011,
+				AA000012,
+				AA000013,
+				AA000014,
+				AA000015,
+				AA000016,
+				AA000017,
+				AA000018,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000003,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AE000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE000020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Local LLM";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.localllm.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE000021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Local LLM";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.localllm.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE000000 /* Build configuration list for PBXProject */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE000010 /* Debug */,
+				AE000011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE000002 /* Build configuration list for PBXNativeTarget */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE000020 /* Debug */,
+				AE000021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AF000000 /* Project object */;
+}
