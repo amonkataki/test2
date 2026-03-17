@@ -9,7 +9,7 @@ protocol LLMEngineProtocol {
     var loadedModelPath: String? { get }
 }
 
-final class LLMEngine: LLMEngineProtocol {
+final class LLMEngine: LLMEngineProtocol, @unchecked Sendable {
     private var modelPath: String?
     private var isLoaded = false
     private let inferenceQueue = DispatchQueue(label: "com.ondeviceai.inference", qos: .userInitiated)
