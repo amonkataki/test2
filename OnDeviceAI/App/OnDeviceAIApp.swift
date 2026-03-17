@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct LocalLLMApp: App {
+struct OnDeviceAIApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Conversation.self,

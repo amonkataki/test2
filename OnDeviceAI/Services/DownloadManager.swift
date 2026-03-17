@@ -28,7 +28,7 @@ final class DownloadManager: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        let config = URLSessionConfiguration.background(withIdentifier: "com.localllm.download")
+        let config = URLSessionConfiguration.background(withIdentifier: "com.ondeviceai.download")
         config.isDiscretionary = false
         config.sessionSendsLaunchEvents = true
         urlSession = URLSession(configuration: config, delegate: self, delegateQueue: nil)

@@ -4,9 +4,9 @@
 
 | Field | Value |
 |-------|-------|
-| **App Name** | Local LLM - Private AI Chat |
+| **App Name** | OnDeviceAI - Private AI Chat |
 | **Subtitle** | On-Device AI, No Internet Needed |
-| **Bundle ID** | com.localllm.app |
+| **Bundle ID** | com.ondeviceai.app |
 | **Category** | Utilities |
 | **Content Rating** | 12+ (Infrequent/Mild Mature/Suggestive Themes) |
 | **Price** | Free / Paid (your choice) |
@@ -18,9 +18,9 @@ Run AI chatbots privately on your iPhone and iPad. No internet, no subscriptions
 
 ### Full Description
 
-Local LLM brings the power of large language models directly to your device. Chat with AI models that run 100% on your iPhone or iPad - no internet connection required, no subscriptions, and absolutely no data leaves your device.
+OnDeviceAI brings the power of large language models directly to your device. Chat with AI models that run 100% on your iPhone or iPad - no internet connection required, no subscriptions, and absolutely no data leaves your device.
 
-**Why Local LLM?**
+**Why OnDeviceAI?**
 
 - PRIVACY FIRST: All AI processing happens on your device. Your conversations never leave your phone.
 - NO INTERNET REQUIRED: Once you download a model, chat works completely offline.

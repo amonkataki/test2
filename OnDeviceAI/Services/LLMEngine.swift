@@ -15,7 +15,7 @@ protocol LLMEngineProtocol {
 final class LLMEngine: LLMEngineProtocol {
     private var modelPath: String?
     private var isLoaded = false
-    private let inferenceQueue = DispatchQueue(label: "com.localllm.inference", qos: .userInitiated)
+    private let inferenceQueue = DispatchQueue(label: "com.ondeviceai.inference", qos: .userInitiated)
 
     // llama.cpp context pointers - these would be the actual C types
     // For now we use opaque pointers; the real implementation needs llama.h bridging header

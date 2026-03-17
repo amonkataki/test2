@@ -5,13 +5,13 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
 </p>
 
-# LocalLLM - Private AI Chat for iOS
+# OnDeviceAI - Private AI Chat for iOS
 
 > Created by **Ali Moustafa** — [mustafa30102001@gmail.com](mailto:mustafa30102001@gmail.com)
 
 Run large language models **entirely on your iPhone or iPad**. No internet required, no subscriptions, no data leaves your device.
 
-LocalLLM uses [llama.cpp](https://github.com/ggerganov/llama.cpp) with Metal GPU acceleration to run GGUF models locally on Apple Silicon, delivering fast and private AI conversations.
+OnDeviceAI uses [llama.cpp](https://github.com/ggerganov/llama.cpp) with Metal GPU acceleration to run GGUF models locally on Apple Silicon, delivering fast and private AI conversations.
 
 ---
 
@@ -62,19 +62,19 @@ LocalLLM uses [llama.cpp](https://github.com/ggerganov/llama.cpp) with Metal GPU
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/LocalLLM.git
-cd LocalLLM
+git clone https://github.com/YOUR_USERNAME/OnDeviceAI.git
+cd OnDeviceAI
 ```
 
 ### 2. Open in Xcode
 
 ```bash
-open LocalLLM.xcodeproj
+open OnDeviceAI.xcodeproj
 ```
 
 ### 3. Configure Signing
 
-1. Select the **LocalLLM** target
+1. Select the **OnDeviceAI** target
 2. Go to **Signing & Capabilities**
 3. Select your **Development Team**
 4. Update the **Bundle Identifier** if needed
@@ -86,7 +86,7 @@ The project uses [llama.cpp](https://github.com/ggerganov/llama.cpp) via Swift P
 1. In Xcode, go to **File > Add Package Dependencies**
 2. Enter: `https://github.com/ggerganov/llama.cpp`
 3. Select the `llama` product
-4. Add to the **LocalLLM** target
+4. Add to the **OnDeviceAI** target
 
 ### 5. Build & Run
 
@@ -97,9 +97,9 @@ Select your physical device and press **Cmd+R**.
 ## Architecture
 
 ```
-LocalLLM/
+OnDeviceAI/
 ├── App/
-│   ├── LocalLLMApp.swift          # App entry point, SwiftData container
+│   ├── OnDeviceAIApp.swift           # App entry point, SwiftData container
 │   └── ContentView.swift          # Root TabView with theme support
 ├── Models/
 │   ├── ChatMessage.swift          # SwiftData message model
@@ -139,7 +139,7 @@ LocalLLM/
 
 ### Adding New Models
 
-Edit `LocalLLM/Models/ModelInfo.swift` and add entries to the `catalog` array:
+Edit `OnDeviceAI/Models/ModelInfo.swift` and add entries to the `catalog` array:
 
 ```swift
 ModelInfo(
@@ -174,7 +174,7 @@ The `LLMEngine.swift` file contains commented-out llama.cpp integration code. To
 
 ## Privacy
 
-LocalLLM is designed with privacy as a core principle:
+OnDeviceAI is designed with privacy as a core principle:
 
 - All AI inference runs **entirely on-device**
 - No data is sent to any server

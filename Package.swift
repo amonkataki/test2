@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "LocalLLM",
+    name: "OnDeviceAI",
     platforms: [
         .iOS(.v17)
     ],
@@ -12,11 +12,11 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "LocalLLM",
+            name: "OnDeviceAI",
             dependencies: [
                 .product(name: "llama", package: "llama.cpp")
             ],
-            path: "LocalLLM"
+            path: "OnDeviceAI"
         )
     ]
 )

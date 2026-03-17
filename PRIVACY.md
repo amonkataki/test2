@@ -1,10 +1,10 @@
-# Privacy Policy - LocalLLM
+# Privacy Policy - OnDeviceAI
 
 **Last updated: March 2026**
 
 ## Overview
 
-LocalLLM is designed with privacy as its core principle. The app runs AI models entirely on your device with no data transmission to external servers.
+OnDeviceAI is designed with privacy as its core principle. The app runs AI models entirely on your device with no data transmission to external servers.
 
 ## Data Collection
 

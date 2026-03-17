@@ -1,6 +1,6 @@
-# Contributing to LocalLLM
+# Contributing to OnDeviceAI
 
-Thank you for your interest in contributing to LocalLLM! This guide will help you get started.
+Thank you for your interest in contributing to OnDeviceAI! This guide will help you get started.
 
 ## How to Contribute
 
@@ -64,7 +64,7 @@ To add a new model to the catalog:
 1. Find a GGUF-quantized version on HuggingFace
 2. Prefer Q4_K_M quantization for mobile
 3. Test the model on an actual device
-4. Add the entry to `ModelInfo.catalog` in `LocalLLM/Models/ModelInfo.swift`
+4. Add the entry to `ModelInfo.catalog` in `OnDeviceAI/Models/ModelInfo.swift`
 5. Verify the download URL works
 
 ## Development Setup

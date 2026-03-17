@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA000001 /* LocalLLMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001; };
+		AA000001 /* OnDeviceAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001; };
 		AA000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000002; };
 		AA000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB000003; };
 		AA000004 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000004; };
@@ -29,8 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB000000 /* LocalLLM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalLLM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB000001 /* LocalLLMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLLMApp.swift; sourceTree = "<group>"; };
+		AB000000 /* OnDeviceAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnDeviceAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB000001 /* OnDeviceAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDeviceAIApp.swift; sourceTree = "<group>"; };
 		AB000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB000004 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -55,12 +55,12 @@
 		AC000000 = {
 			isa = PBXGroup;
 			children = (
-				AC000001 /* LocalLLM */,
+				AC000001 /* OnDeviceAI */,
 				AC000002 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AC000001 /* LocalLLM */ = {
+		AC000001 /* OnDeviceAI */ = {
 			isa = PBXGroup;
 			children = (
 				AC000010 /* App */,
@@ -70,13 +70,13 @@
 				AC000014 /* Services */,
 				AB000003 /* Assets.xcassets */,
 			);
-			path = LocalLLM;
+			path = OnDeviceAI;
 			sourceTree = "<group>";
 		};
 		AC000002 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB000000 /* LocalLLM.app */,
+				AB000000 /* OnDeviceAI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 		AC000010 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				AB000001 /* LocalLLMApp.swift */,
+				AB000001 /* OnDeviceAIApp.swift */,
 				AB000002 /* ContentView.swift */,
 			);
 			path = App;
@@ -161,7 +161,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD000000 /* LocalLLM */ = {
+		AD000000 /* OnDeviceAI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE000002;
 			buildPhases = (
@@ -172,11 +172,11 @@
 			);
 			dependencies = (
 			);
-			name = LocalLLM;
+			name = OnDeviceAI;
 			packageProductDependencies = (
 			);
-			productName = LocalLLM;
-			productReference = AB000000 /* LocalLLM.app */;
+			productName = OnDeviceAI;
+			productReference = AB000000 /* OnDeviceAI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD000000 /* LocalLLM */,
+				AD000000 /* OnDeviceAI */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +312,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Local LLM";
+				INFOPLIST_KEY_CFBundleDisplayName = "OnDeviceAI";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -324,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.localllm.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ondeviceai.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -343,7 +343,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Local LLM";
+				INFOPLIST_KEY_CFBundleDisplayName = "OnDeviceAI";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -355,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.localllm.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ondeviceai.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

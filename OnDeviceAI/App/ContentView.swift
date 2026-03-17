@@ -52,7 +52,7 @@ struct ContentView: View {
                 .font(.system(size: 60))
                 .foregroundStyle(themeManager.accentColor.opacity(0.6))
 
-            Text("Local LLM Chat")
+            Text("OnDeviceAI")
                 .font(.title)
                 .fontWeight(.bold)
 
