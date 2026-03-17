@@ -12,10 +12,20 @@ final class LLMService: ObservableObject {
     private let modelManager = ModelManager.shared
 
     struct GenerationConfig {
-        var maxTokens: Int = 512
-        var temperature: Float = 0.7
-        var topP: Float = 0.9
-        var systemPrompt: String = "You are a helpful AI assistant."
+        var maxTokens: Int
+        var temperature: Float
+        var topP: Float
+        var systemPrompt: String
+        var contextSize: Int
+
+        init() {
+            let defaults = UserDefaults.standard
+            self.maxTokens = defaults.integer(forKey: "maxTokens").nonZero ?? 512
+            self.temperature = defaults.float(forKey: "temperature").nonZero ?? 0.7
+            self.topP = defaults.float(forKey: "topP").nonZero ?? 0.9
+            self.systemPrompt = defaults.string(forKey: "systemPrompt") ?? "You are a helpful AI assistant."
+            self.contextSize = defaults.integer(forKey: "contextSize").nonZero ?? 2048
+        }
     }
 
     func loadModel(_ modelId: String) async throws {
@@ -23,13 +33,13 @@ final class LLMService: ObservableObject {
             throw LLMError.modelFileNotFound("No downloaded file for model: \(modelId)")
         }
 
-        // Don't reload if already loaded
         if engine.isModelLoaded, engine.loadedModelPath == path {
             currentModelId = modelId
             return
         }
 
-        try await engine.loadModel(at: path)
+        let config = GenerationConfig()
+        try await engine.loadModel(at: path, contextSize: config.contextSize)
         currentModelId = modelId
     }
 
@@ -42,7 +52,6 @@ final class LLMService: ObservableObject {
             throw LLMError.modelNotLoaded
         }
 
-        // Ensure model is loaded
         if !engine.isModelLoaded || currentModelId != modelId {
             try await loadModel(modelId)
         }
@@ -50,7 +59,6 @@ final class LLMService: ObservableObject {
         isGenerating = true
         defer { isGenerating = false }
 
-        // Build the prompt from messages using chat template
         let prompt = buildPrompt(messages: messages, config: config)
 
         return try await engine.generate(
@@ -63,12 +71,11 @@ final class LLMService: ObservableObject {
     }
 
     func stopGeneration() {
+        engine.shouldStop = true
         isGenerating = false
-        // In real implementation: set a flag that the engine checks during generation
     }
 
     private func buildPrompt(messages: [(role: MessageRole, content: String)], config: GenerationConfig) -> String {
-        // Build a ChatML-style prompt (works with most GGUF models)
         var prompt = "<|im_start|>system\n\(config.systemPrompt)<|im_end|>\n"
 
         for message in messages {
@@ -78,7 +85,6 @@ final class LLMService: ObservableObject {
             case .assistant:
                 prompt += "<|im_start|>assistant\n\(message.content)<|im_end|>\n"
             case .system:
-                // Already handled above
                 break
             }
         }
@@ -86,4 +92,14 @@ final class LLMService: ObservableObject {
         prompt += "<|im_start|>assistant\n"
         return prompt
     }
+}
+
+// MARK: - Helpers
+
+private extension Int {
+    var nonZero: Int? { self == 0 ? nil : self }
+}
+
+private extension Float {
+    var nonZero: Float? { self == 0 ? nil : self }
 }

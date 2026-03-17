@@ -7,8 +7,7 @@ let package = Package(
         .iOS(.v17)
     ],
     dependencies: [
-        // llama.cpp Swift bindings
-        .package(url: "https://github.com/ggerganov/llama.cpp", branch: "master")
+        .package(url: "https://github.com/ggerganov/llama.cpp", exact: "4878")
     ],
     targets: [
         .executableTarget(
