@@ -26,7 +26,6 @@
 		AA000017 /* ModelSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000017; };
 		AA000018 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000018; };
 		AA000019 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000019; };
-		AA100000 /* llama in Frameworks */ = {isa = PBXBuildFile; productRef = AF100001 /* llama */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,7 +166,6 @@
 			buildConfigurationList = AE000002;
 			buildPhases = (
 				AD000001 /* Sources */,
-				AD000003 /* Frameworks */,
 				AD000002 /* Resources */,
 			);
 			buildRules = (
@@ -176,7 +174,6 @@
 			);
 			name = OnDeviceAI;
 			packageProductDependencies = (
-				AF100001 /* llama */,
 			);
 			productName = OnDeviceAI;
 			productReference = AB000000 /* OnDeviceAI.app */;
@@ -207,7 +204,6 @@
 			);
 			mainGroup = AC000000;
 			packageReferences = (
-				AF100000 /* XCRemoteSwiftPackageReference "llama.cpp" */,
 			);
 			productRefGroup = AC000002 /* Products */;
 			projectDirPath = "";
@@ -256,17 +252,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		AD000003 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA100000 /* llama in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		AE000010 /* Debug */ = {
@@ -402,25 +387,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AF100000 /* XCRemoteSwiftPackageReference "llama.cpp" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ggml-org/llama.cpp";
-			requirement = {
-				kind = branch;
-				branch = master;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AF100001 /* llama */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF100000 /* XCRemoteSwiftPackageReference "llama.cpp" */;
-			productName = llama;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 	};
 	rootObject = AF000000 /* Project object */;
